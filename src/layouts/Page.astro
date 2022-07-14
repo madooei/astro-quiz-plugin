@@ -1,4 +1,29 @@
 ---
+import { replaceAllWhitespaceWithSingleSpace } from "../util/formatter";
+
+const containerStyles = replaceAllWhitespaceWithSingleSpace(`
+  relative 
+  flex 
+  min-h-screen 
+  flex-col 
+  justify-center 
+  overflow-hidden 
+  bg-gray-50 
+  py-6 
+  sm:py-12
+`);
+
+const mainElementStyle = replaceAllWhitespaceWithSingleSpace(`
+  mx-auto 
+  min-h-screen 
+  max-w-prose
+`);
+
+const articleElementStyle = replaceAllWhitespaceWithSingleSpace(`
+  prose 
+  prose-slate
+`);
+
 const { content } = Astro.props;
 ---
 
@@ -12,9 +37,9 @@ const { content } = Astro.props;
 </head>
 
 <body>
-  <div class="relative flex min-h-screen flex-col justify-center overflow-hidden bg-gray-50 py-6 sm:py-12">
-    <div class="mx-auto max-w-md">
-      <article class="prose prose-slate lg:prose-xl">
+  <div class={containerStyles}>
+    <div class={mainElementStyle}>
+      <article class={articleElementStyle}>
         <slot />
       </article>
     </div>

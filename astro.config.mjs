@@ -13,4 +13,6 @@ export default defineConfig({
     remarkPlugins: [],
     rehypePlugins: [],
   },
+  site: "https://madooei.github.io",
+  base: "/astro-quiz-plugin",
 });

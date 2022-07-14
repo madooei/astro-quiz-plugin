@@ -1,3 +1,8 @@
+---
+title: Quiz
+layout: ../layouts/Page.astro
+---
+
 What will be the output of the following code?
 
 ```java
